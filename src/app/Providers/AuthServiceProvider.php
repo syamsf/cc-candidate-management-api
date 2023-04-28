@@ -20,11 +20,21 @@ class AuthServiceProvider extends ServiceProvider
     /**
      * Register any authentication / authorization services.
      */
-    public function boot(): void
-    {
+    public function boot(): void {
+      // Passport scope
+      Passport::tokensCan([
+        'manage-candidate'    => 'Manager candidate data',
+        'read-only-candidate' => 'View candidate data',
+      ]);
+
+      // Passport token expiration
+      Passport::tokensExpireIn(now()->addDays(15));
+      Passport::refreshTokensExpireIn(now()->addDays(30));
+      Passport::personalAccessTokensExpireIn(now()->addMonths(6));
+
+      // Passport keys
       $privateKey = env('PASSPORT_PRIVATE_KEY');
       $publicKey = env('PASSPORT_PUBLIC_KEY');
-
       Passport::loadKeysFrom($privateKey, $publicKey);
     }
 }

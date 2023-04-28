@@ -1,0 +1,318 @@
+openapi: '3.0.3'
+
+info:
+  description: |
+    CodingCollective Candidate Management API
+  version: "0.0.1"
+  title: CodingCollective Candidate Management API
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+servers:
+  - url: http://localhost:8000/api/v1
+
+paths:
+  /candidates:
+    post:
+      security:
+        - oauth2: ['write']
+      summary: Create new candidate
+      tags:
+        - "Candidate Management API"
+      responses:
+        '200':
+          description: Success Response
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 200
+                  data:
+                    $ref: '#/components/schemas/Candidate'
+        '400':
+          description: Error Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 400
+                  errors:
+                    type: array
+                    items:
+                      type: string
+                    example: ["error message 1", "error message 2", "error message 3"]
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Candidate'
+    get:
+      security:
+        - oauth2: ['read']
+      summary: Fetch all candidate data
+      tags:
+        - "Candidate Management API"
+      responses:
+        '200':
+          description: Success Response
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 200
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Candidate'
+        '400':
+          description: Error Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 400
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                    example:
+                      message: "error message"
+
+  /candidates/{id}:
+    get:
+      security:
+        - oauth2: ['read']
+      summary: Fetch candidate data by id
+      parameters:
+        - in: path
+          name: id
+          description: candidate Id
+          schema:
+            type: integer
+          required: true
+      tags:
+        - "Candidate Management API"
+      responses:
+        '200':
+          description: Success Response
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 200
+                  data:
+                    $ref: '#/components/schemas/Candidate'
+        '400':
+          description: Error Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 400
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                    example:
+                      message: "error message"
+    put:
+      security:
+        - oauth2: ['write']
+      summary: Update candidate data by id
+      parameters:
+        - in: path
+          name: id
+          description: candidate Id
+          schema:
+            type: integer
+          required: true
+      tags:
+        - "Candidate Management API"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CandidateUpdate'
+      responses:
+        '200':
+          description: Success Response
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 200
+                  data:
+                    type: object
+                    example: 
+                      message: "success to update candidate data with id 12345"
+        '400':
+          description: Error Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 400
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                    example:
+                      message: "error message"
+    delete:
+      security:
+        - oauth2: ['write']
+      summary: Delete candidate data by id
+      parameters:
+        - in: path
+          name: id
+          description: candidate Id
+          schema:
+            type: integer
+          required: true
+      tags:
+        - "Candidate Management API"
+      responses:
+        '200':
+          description: Success Response
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 200
+                  data:
+                    type: object
+                    example: 
+                      message: "success to delete candidate data with id 12345"
+        '400':
+          description: Error Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    example: 400
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                    example:
+                      message: "error message"
+
+components:
+  securitySchemes:
+    CandidateAuth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://example.com/oauth2/authorize
+          tokenUrl: https://example.com/oauth2/token
+          scopes:
+            read: Grants read access
+            write: Grants write access
+  schemas:
+    Candidate:
+      required:
+        - "name"
+        - "email"
+        - "education"
+        - "applied_position"
+        - "phone"
+        - "top_five_skills"
+        - "resume"
+      type: object
+      properties:
+        name:
+          type: string
+          example: testing dev name
+        email:
+          type: string
+          example: testing@dev.test
+        education:
+          type: string
+          example: 'university of example'
+        applied_position:
+          type: string
+          example: "Technical Architect"
+        phone:
+          type: string
+          example: "08123456789"
+        top_five_skills:
+          type: array
+          items: 
+            type: string
+          example: ["skill 1", "skill 2", "skill 3", "skill 4", "skill 5"]
+        resume:
+          type: string
+          format: binary
+          example: "file"
+        experience:
+          type: string
+          example: "5 years"
+        last_position:
+          type: string
+          example: "Senior Developer"
+    CandidateUpdate:
+      required:
+        - "email"
+      type: object
+      properties:
+        name:
+          type: string
+          example: testing dev name
+        email:
+          type: string
+          example: testing@dev.test
+        education:
+          type: string
+          example: 'university of example'
+        applied_position:
+          type: string
+          example: "Technical Architect"
+        phone:
+          type: string
+          example: "08123456789"
+        top_five_skills:
+          type: array
+          items: 
+            type: string
+          example: ["skill 1", "skill 2", "skill 3", "skill 4", "skill 5"]
+        resume:
+          type: string
+          format: binary
+          example: "file"
+        experience:
+          type: string
+          example: "5 years"
+        last_position:
+          type: string
+          example: "Senior Developer"
+    
