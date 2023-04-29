@@ -15,7 +15,7 @@ paths:
   /candidates:
     post:
       security:
-        - oauth2: ['write']
+        - BearerAuth: []
       summary: Create new candidate
       tags:
         - "Candidate Management API"
@@ -54,7 +54,7 @@ paths:
               $ref: '#/components/schemas/Candidate'
     get:
       security:
-        - oauth2: ['read']
+        - BearerAuth: []
       summary: Fetch all candidate data
       tags:
         - "Candidate Management API"
@@ -93,7 +93,7 @@ paths:
   /candidates/{id}:
     get:
       security:
-        - oauth2: ['read']
+        - BearerAuth: []
       summary: Fetch candidate data by id
       parameters:
         - in: path
@@ -135,7 +135,7 @@ paths:
                       message: "error message"
     put:
       security:
-        - oauth2: ['write']
+        - BearerAuth: []
       summary: Update candidate data by id
       parameters:
         - in: path
@@ -184,7 +184,7 @@ paths:
                       message: "error message"
     delete:
       security:
-        - oauth2: ['write']
+        - BearerAuth: []
       summary: Delete candidate data by id
       parameters:
         - in: path
@@ -238,6 +238,10 @@ components:
           scopes:
             read: Grants read access
             write: Grants write access
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT 
   schemas:
     Candidate:
       required:
