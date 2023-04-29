@@ -47,14 +47,18 @@ class Candidates extends Controller {
 
       return $this->successResponse($result, 201);
     } catch (\Illuminate\Database\QueryException $e) {
-      $message = $this->handleMysqlError($e);
-      return $this->errorResponse($message, 400);
-    } catch (\Exception $e) {
-      return $this->errorResponse($e->getMessage());
-    } finally {
       if (Storage::disk('public')->exists($resumePath)) {
         Storage::disk('public')->delete($resumePath);
       }
+
+      $message = $this->handleMysqlError($e);
+      return $this->errorResponse($message, 400);
+    } catch (\Exception $e) {
+      if (Storage::disk('public')->exists($resumePath)) {
+        Storage::disk('public')->delete($resumePath);
+      }
+
+      return $this->errorResponse($e->getMessage());
     }
   }
 

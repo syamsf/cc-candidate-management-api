@@ -1,0 +1,1966 @@
+{
+	"info": {
+		"_postman_id": "dc6a70ca-ccd0-433f-90ff-8b5e1b54a957",
+		"name": "CC API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15531542"
+	},
+	"item": [
+		{
+			"name": "Candidates",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "testing10@dev.test",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "testing dev",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "testing edu",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "2022-01-01",
+									"type": "text"
+								},
+								{
+									"key": "applied_position",
+									"value": "testing apply",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "last_position",
+									"value": "last",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "experience",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "top_five_skills[]",
+									"value": "skill 1",
+									"type": "text"
+								},
+								{
+									"key": "top_five_skills[]",
+									"value": "skill 2",
+									"type": "text"
+								},
+								{
+									"key": "top_five_skills[]",
+									"value": "skill 3",
+									"type": "text"
+								},
+								{
+									"key": "top_five_skills[]",
+									"value": "skill 4",
+									"type": "text"
+								},
+								{
+									"key": "top_five_skills[]",
+									"value": "skill 5",
+									"type": "text"
+								},
+								{
+									"key": "resume",
+									"type": "file",
+									"src": "/Users/syams/Downloads/Workbook Golang.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local-dev}}/api/v1/candidates",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"candidates"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "testing10@dev.test",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "testing dev",
+											"type": "text"
+										},
+										{
+											"key": "education",
+											"value": "testing edu",
+											"type": "text"
+										},
+										{
+											"key": "birthdate",
+											"value": "2022-01-01",
+											"type": "text"
+										},
+										{
+											"key": "applied_position",
+											"value": "testing apply",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "last_position",
+											"value": "last",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "experience",
+											"value": "experience",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 1",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 2",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 3",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 4",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 5",
+											"type": "text"
+										},
+										{
+											"key": "resume",
+											"type": "file",
+											"src": "/Users/syams/Downloads/Workbook Golang.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:17:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:17:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"data\": {\n        \"name\": \"testing dev\",\n        \"education\": \"testing edu\",\n        \"birthdate\": \"2022-01-01\",\n        \"applied_position\": \"testing apply\",\n        \"top_five_skills\": [\n            \"skill 1\",\n            \"skill 2\",\n            \"skill 3\",\n            \"skill 4\",\n            \"skill 5\"\n        ],\n        \"email\": \"testing10@dev.test\",\n        \"phone\": \"1234567890\",\n        \"experience\": \"experience\",\n        \"last_position\": \"last\",\n        \"resume\": \"http://localhost:8000/storage/resume/1682781474 - testing10@dev.test - Resume.pdf\",\n        \"id\": \"990c4f33-0bbc-4ba3-a12e-29da08444a84\",\n        \"updated_at\": 1682781474,\n        \"created_at\": 1682781474\n    }\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "testing10@dev.test",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "testing dev",
+											"type": "text"
+										},
+										{
+											"key": "education",
+											"value": "testing edu",
+											"type": "text"
+										},
+										{
+											"key": "birthdate",
+											"value": "2022-01-01",
+											"type": "text"
+										},
+										{
+											"key": "applied_position",
+											"value": "testing apply",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "last_position",
+											"value": "last",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "experience",
+											"value": "experience",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 1",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 2",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 3",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 4",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 5",
+											"type": "text"
+										},
+										{
+											"key": "resume",
+											"type": "file",
+											"src": "/Users/syams/Downloads/Workbook Golang.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:18:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:18:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"email\": [\n            \"The email field is required.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "Failed duplicate email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "testing10@dev.test",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "testing dev",
+											"type": "text"
+										},
+										{
+											"key": "education",
+											"value": "testing edu",
+											"type": "text"
+										},
+										{
+											"key": "birthdate",
+											"value": "2022-01-01",
+											"type": "text"
+										},
+										{
+											"key": "applied_position",
+											"value": "testing apply",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "last_position",
+											"value": "last",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "experience",
+											"value": "experience",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 1",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 2",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 3",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 4",
+											"type": "text"
+										},
+										{
+											"key": "top_five_skills[]",
+											"value": "skill 5",
+											"type": "text"
+										},
+										{
+											"key": "resume",
+											"type": "file",
+											"src": "/Users/syams/Downloads/Workbook Golang.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:18:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:18:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"errors\": {\n        \"message\": \"email already registered\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "testing1@test.dev",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "testing 123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098ea",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"candidates",
+								"990759ba-f0c2-4de5-8957-50ee2712098ea"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "testing1@test.dev",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "testing 123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098e",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"990759ba-f0c2-4de5-8957-50ee2712098e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:19:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:19:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"message\": \"success to update candidate data with id 990759ba-f0c2-4de5-8957-50ee2712098e\"\n    }\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "testing1@test.dev",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "testing 123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098ea",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"990759ba-f0c2-4de5-8957-50ee2712098ea"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:18:53 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:18:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"errors\": {\n        \"message\": \"failed to update candidate data with id 990759ba-f0c2-4de5-8957-50ee2712098ea\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local-dev}}/api/v1/candidates",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"candidates"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 13:11:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 13:11:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"id\": \"990759ba-f0c2-4de5-8957-50ee2712098e\",\n            \"email\": \"testing1@test.dev\",\n            \"name\": \"testing 002\",\n            \"education\": \"testign edu\",\n            \"birthdate\": \"2022-01-01\",\n            \"experience\": null,\n            \"last_position\": null,\n            \"applied_position\": \"testing apply\",\n            \"top_five_skills\": [\n                \"testing 1\",\n                \"testing 2\",\n                \"testing 3\",\n                \"testing 4\",\n                \"testing 5\"\n            ],\n            \"phone\": \"1234567890\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682568492 - testing@dev.test - Resume.pdf\",\n            \"created_at\": 1682568492,\n            \"updated_at\": 1682575071\n        },\n        {\n            \"id\": \"990bb80e-fffa-4ef3-9a71-0675494d7977\",\n            \"email\": \"testing@dev.test\",\n            \"name\": \"testing dev\",\n            \"education\": \"testign edu\",\n            \"birthdate\": \"2022-01-01\",\n            \"experience\": null,\n            \"last_position\": null,\n            \"applied_position\": \"testing apply\",\n            \"top_five_skills\": [\n                \"testing 1\",\n                \"testing 2\",\n                \"testing 3\",\n                \"testing 4\",\n                \"testing 5\"\n            ],\n            \"phone\": \"1234567890\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682756116 - testing@dev.test - Resume.pdf\",\n            \"created_at\": 1682756116,\n            \"updated_at\": 1682756116\n        },\n        {\n            \"id\": \"990bc4cd-037a-42df-ba14-3119996fadc3\",\n            \"email\": \"testingsyams@gmail.com\",\n            \"name\": \"testing\",\n            \"education\": \"educ\",\n            \"birthdate\": \"1970-01-01\",\n            \"experience\": null,\n            \"last_position\": null,\n            \"applied_position\": \"apppp\",\n            \"top_five_skills\": [\n                \"1\",\n                \"2\",\n                \"3\",\n                \"4\",\n                \"5\"\n            ],\n            \"phone\": \"628123456789\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682758254 - testingsyams@gmail.com - Resume.pdf\",\n            \"created_at\": 1682758254,\n            \"updated_at\": 1682758254\n        },\n        {\n            \"id\": \"990bd908-4a37-49c2-a0f1-5af69bf2e753\",\n            \"email\": \"testing01@dev.test\",\n            \"name\": \"testing\",\n            \"education\": \"edu\",\n            \"birthdate\": \"2023-01-01\",\n            \"experience\": null,\n            \"last_position\": null,\n            \"applied_position\": \"apppp\",\n            \"top_five_skills\": [\n                \"1\",\n                \"2\",\n                \"3\",\n                \"4\",\n                \"5\"\n            ],\n            \"phone\": \"0812345678\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682761648 - testing01@dev.test - Resume.pdf\",\n            \"created_at\": 1682761648,\n            \"updated_at\": 1682761648\n        },\n        {\n            \"id\": \"990be6ff-6656-4f6e-b5f5-33569796c82d\",\n            \"email\": \"testing2@dev.test\",\n            \"name\": \"testing\",\n            \"education\": \"edu\",\n            \"birthdate\": \"2020-01-01\",\n            \"experience\": null,\n            \"last_position\": \"last\",\n            \"applied_position\": \"apppp\",\n            \"top_five_skills\": [\n                \"1\",\n                \"2\",\n                \"3\",\n                \"4\",\n                \"5\"\n            ],\n            \"phone\": \"08123456789\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682763991 - testing2@dev.test - Resume.pdf\",\n            \"created_at\": 1682763991,\n            \"updated_at\": 1682766227\n        },\n        {\n            \"id\": \"990bf880-b09c-49f8-8079-9bec86c37a24\",\n            \"email\": \"testing4@dev.test\",\n            \"name\": \"testing dev\",\n            \"education\": \"testign edu\",\n            \"birthdate\": \"2022-01-01\",\n            \"experience\": null,\n            \"last_position\": \"last\",\n            \"applied_position\": \"testing apply\",\n            \"top_five_skills\": [\n                \"testing 1\",\n                \"testing 2\",\n                \"testing 3\",\n                \"testing 4\",\n                \"testing 5\"\n            ],\n            \"phone\": \"1234567890\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682766928 - testing4@dev.test - Resume.pdf\",\n            \"created_at\": 1682766928,\n            \"updated_at\": 1682766928\n        },\n        {\n            \"id\": \"990bfad2-e10d-4d89-8ae8-e520a53973ce\",\n            \"email\": \"testing11@test.dev\",\n            \"name\": \"testing 12\",\n            \"education\": \"edu\",\n            \"birthdate\": \"2020-01-01\",\n            \"experience\": \"exp\",\n            \"last_position\": \"lastt\",\n            \"applied_position\": \"apppppp\",\n            \"top_five_skills\": [\n                \"1\",\n                \"2\",\n                \"3\",\n                \"4\",\n                \"5\"\n            ],\n            \"phone\": \"08123456789\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682767318 - testing11@test.dev - Resume.pdf\",\n            \"created_at\": 1682767318,\n            \"updated_at\": 1682767340\n        },\n        {\n            \"id\": \"990c07f5-061e-416a-8eb9-67493d6c09da\",\n            \"email\": \"testing5@dev.test\",\n            \"name\": \"testing dev\",\n            \"education\": \"testign edu\",\n            \"birthdate\": \"2022-01-01\",\n            \"experience\": null,\n            \"last_position\": \"last\",\n            \"applied_position\": \"testing apply\",\n            \"top_five_skills\": [\n                \"testing 1\",\n                \"testing 2\",\n                \"testing 3\",\n                \"testing 4\",\n                \"testing 5\"\n            ],\n            \"phone\": \"1234567890\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682769521 - testing5@dev.test - Resume.pdf\",\n            \"created_at\": 1682769521,\n            \"updated_at\": 1682769521\n        },\n        {\n            \"id\": \"990c0861-24fc-46b4-aee0-3b8476987b33\",\n            \"email\": \"testing6@dev.test\",\n            \"name\": \"testing dev\",\n            \"education\": \"testign edu\",\n            \"birthdate\": \"2022-01-01\",\n            \"experience\": null,\n            \"last_position\": \"last\",\n            \"applied_position\": \"testing apply\",\n            \"top_five_skills\": [\n                \"testing 1\",\n                \"testing 2\",\n                \"testing 3\",\n                \"testing 4\",\n                \"testing 5\"\n            ],\n            \"phone\": \"1234567890\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682769592 - testing6@dev.test - Resume.pdf\",\n            \"created_at\": 1682769592,\n            \"updated_at\": 1682769592\n        },\n        {\n            \"id\": \"990c08b7-611e-4005-b4ba-0462d0326d83\",\n            \"email\": \"testing7@dev.test\",\n            \"name\": \"testing dev\",\n            \"education\": \"testign edu\",\n            \"birthdate\": \"2022-01-01\",\n            \"experience\": null,\n            \"last_position\": \"last\",\n            \"applied_position\": \"testing apply\",\n            \"top_five_skills\": [\n                \"testing 1\",\n                \"testing 2\",\n                \"testing 3\",\n                \"testing 4\",\n                \"testing 5\"\n            ],\n            \"phone\": \"1234567890\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682769648 - testing7@dev.test - Resume.pdf\",\n            \"created_at\": 1682769648,\n            \"updated_at\": 1682769648\n        },\n        {\n            \"id\": \"990c08f1-8aaa-48ed-85b5-ba1fee49a3f2\",\n            \"email\": \"testing8@dev.test\",\n            \"name\": \"testing dev\",\n            \"education\": \"testign edu\",\n            \"birthdate\": \"2022-01-01\",\n            \"experience\": null,\n            \"last_position\": \"last\",\n            \"applied_position\": \"testing apply\",\n            \"top_five_skills\": [\n                \"testing 1\",\n                \"testing 2\",\n                \"testing 3\",\n                \"testing 4\",\n                \"testing 5\"\n            ],\n            \"phone\": \"1234567890\",\n            \"resume\": \"http://localhost:8000/storage/resume/1682769687 - testing8@dev.test - Resume.pdf\",\n            \"created_at\": 1682769687,\n            \"updated_at\": 1682769687\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098ea",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"candidates",
+								"990759ba-f0c2-4de5-8957-50ee2712098ea"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098e",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"990759ba-f0c2-4de5-8957-50ee2712098e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:19:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:19:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"id\": \"990759ba-f0c2-4de5-8957-50ee2712098e\",\n        \"email\": \"testing1@test.dev\",\n        \"name\": \"testing 123\",\n        \"education\": \"testign edu\",\n        \"birthdate\": \"2022-01-01\",\n        \"experience\": null,\n        \"last_position\": null,\n        \"applied_position\": \"testing apply\",\n        \"top_five_skills\": [\n            \"testing 1\",\n            \"testing 2\",\n            \"testing 3\",\n            \"testing 4\",\n            \"testing 5\"\n        ],\n        \"phone\": \"1234567890\",\n        \"resume\": \"http://localhost:8000/storage/resume/1682568492 - testing@dev.test - Resume.pdf\",\n        \"created_at\": 1682568492,\n        \"updated_at\": 1682781543\n    }\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098ea",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"990759ba-f0c2-4de5-8957-50ee2712098ea"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:19:36 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:19:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"errors\": {\n        \"message\": \"failed to find candidates with id 990759ba-f0c2-4de5-8957-50ee2712098ea\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098ea",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"candidates",
+								"990759ba-f0c2-4de5-8957-50ee2712098ea"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Invalid scope",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098e",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"990759ba-f0c2-4de5-8957-50ee2712098e"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 13:40:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 13:40:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"message\": \"The requested scope is invalid. You don't have permission to access this resource\"\n    }\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098e",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"990759ba-f0c2-4de5-8957-50ee2712098e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:20:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:20:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"message\": \"success to delete candidate data with id 990759ba-f0c2-4de5-8957-50ee2712098e\"\n    }\n}"
+						},
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local-dev}}/api/v1/candidates/990759ba-f0c2-4de5-8957-50ee2712098e",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										"990759ba-f0c2-4de5-8957-50ee2712098e"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:20:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:20:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"errors\": {\n        \"message\": \"failed to delete candidate data with id 990759ba-f0c2-4de5-8957-50ee2712098e\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "testing5@test.dev",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "role_id",
+									"value": "2",
+									"description": "1 for superuser, 2 for common user",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "testing 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local-dev}}/api/v1/register",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "testing6@test.dev",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "role_id",
+											"value": "2",
+											"description": "1 for superuser, 2 for common user",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "testing 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/register",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:21:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:21:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"email\": \"testing6@test.dev\",\n        \"name\": \"testing 1\",\n        \"role_id\": 2,\n        \"updated_at\": \"2023-04-29T15:21:49.000000Z\",\n        \"created_at\": \"2023-04-29T15:21:49.000000Z\",\n        \"id\": 18\n    }\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "testing5@test.dev",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "role_id",
+											"value": "2",
+											"description": "1 for superuser, 2 for common user",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "testing 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/register",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:21:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:21:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"errors\": {\n        \"message\": \"email already registered\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "testing3@test.dev1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local-dev}}/api/v1/login",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "testing3@test.dev",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/login",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:22:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:22:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"testing3@test.dev\",\n    \"user_id\": 8,\n    \"scope\": [\n        \"manage-candidate\",\n        \"read-only-candidate\"\n    ],\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGI3NmZjMjAyZDlkMmYzNzA2ZTI5M2ZiZjg4MjMzOGM3NjU3YzNmZGVkOGY2NTczZGJjNThkNGQ5ZmRjZTM0ZTVmZGQ0NTZjYjZiYjRhMTciLCJpYXQiOjE2ODI3ODE3MjguNzc3Njg0LCJuYmYiOjE2ODI3ODE3MjguNzc3Njk1LCJleHAiOjE2OTg1OTI5MjguNzMwMDcsInN1YiI6IjgiLCJzY29wZXMiOlsibWFuYWdlLWNhbmRpZGF0ZSIsInJlYWQtb25seS1jYW5kaWRhdGUiXX0.sxvvv4LdA_xF3cAu3JN9ZkVZi1s0YNIgZLuqGiDb1Q_fDhKLLOxbXHG24klxfzLKEpMaZsXD--kYGjkUwujO84X4jO0cV4mMyKAvRP2AaFdRLahI-uLgqailfHwKkwSszLRmZ0Eobq0F1mJIARmYlwXHUv-va5idJFruUQw6P6xHCHEP4WCEW-mSYiOOAuVjVX2jF1MbaV25jyNxynro6b-Dgb-MuLmBJ8fArYy4VMIPnCsoVgFy9fztJiYWLYmTdDRi3MauBoika47kFfe9x5Ncy8wLp763KcooCZt2VC7jbrCZwrYFE9ve0n1dYcj4vWW-CUWwVZIaTUMM_yXVEtUkNsTdwK7rPHFhH-bJPcn0R-yNoyNg7RMJ8HXPRcTw9ipEe9Exyg8eMN_8a352wS9jltO8HSZ0nvSI6i6a0W-P1r5JUJ1N-DBurLN7GalikWrELenI3G1N3enpwh5NFiq5DSICbql2PMMwG5Igf9JMZG9IN1NVVtUFxQPjkJemzs3tpqOUUVaDIxXY3p5iYflEQYhGkbLLZWP7unti1spYm248L1JwCdxytsUOGmLl2oiOwck_yLRuztvYU7g5zShGnNM9rhx81-t4FghzF73-HD7LKVHRHxhsx7R1ffWFx8dBAWRCNBR9lIQIeVZ9a5GieGskqs3FTHEfzi2dSfk\"\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "testing3@test.dev1",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/login",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:33:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:33:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"message\": \"email is not registered yet\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Generate secret and client_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "redirect",
+									"value": "",
+									"description": "optional",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "scope[]",
+									"value": "manage-candidate",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "scope[]",
+									"value": "read-only-candidate",
+									"type": "text"
+								},
+								{
+									"key": "scope[]",
+									"value": "*",
+									"description": "all scope",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local-dev}}/api/v1/secret",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"secret"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Generate secret and client_id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "redirect",
+											"value": "",
+											"description": "optional",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "scope[]",
+											"value": "manage-candidate",
+											"type": "text"
+										},
+										{
+											"key": "scope[]",
+											"value": "read-only-candidate",
+											"type": "text"
+										},
+										{
+											"key": "scope[]",
+											"value": "*",
+											"description": "all scope",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/api/v1/secret",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"secret"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 14:48:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 14:48:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"client_id\": 8,\n        \"client_secret\": \"92PkJrTQxANRoGASFWcEFleDqjNga6jD8Xnq7Xyx\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Generate oauth access token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "92PkJrTQxANRoGASFWcEFleDqjNga6jD8Xnq7Xyx",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "*",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local-dev}}/oauth/token",
+							"host": [
+								"{{local-dev}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "92PkJrTQxANRoGASFWcEFleDqjNga6jD8Xnq7Xyx",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "*",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local-dev}}/oauth/token",
+									"host": [
+										"{{local-dev}}"
+									],
+									"path": [
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:00:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Apr 2023 15:00:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.1"
+								},
+								{
+									"key": "pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, private"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 1296000,\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4IiwianRpIjoiOWZjZTNmOTc4ZmE2ZjVjMmVmZDJlYjRkYmM2OWIxZmYxNmIzMGJhMjJkZmVkZTljNjVkNzZjMDhiYjdhOTUxZDBkYjIyYjdlZGJhMzBmOTQiLCJpYXQiOjE2ODI3ODA0MjUuOTM1MzUzLCJuYmYiOjE2ODI3ODA0MjUuOTM1MzU5LCJleHAiOjE2ODQwNzY0MjUuODgxNTI4LCJzdWIiOiIiLCJzY29wZXMiOlsiKiJdfQ.CGeRBkDSqkr6AI5RtIh7geQePS-Gzl8LZMKzB9sOl897GNQ-RkJe1FkkMmjV1sfDBPxku0HTkXlGmc2bSdQipuLneo2R2XU_-eu0mM60x6fUdZX_ln3bkBeS0kOwqCk4FHtLT1rKcMnCwcnQDEZ8yzPuRdCZtwtBDJ19rJ1D6V45JXMM9_OCUL99nQ727cWZwtAsA6tWoromSgRkRjejAWwf7SPICS4ywUrgcIkvi5jC8zH1DYYcm8dzJiRV6bz2FbdhJgDn-zLBVKWtkMU9kSxhcYmv4kA_5vfeCIopyG3DYdhPfmkNUWZzn19YqjoQEyrE-bvXWB9wlsddy0Xnc_93tYqYU3OIeBMpCffIpqtZlVZFMtMVKHBn05dxJMo2VxslwKSuOY6yhMsvWE-OnjPSYPD_dj4k-ebgMYIsZcQHvz6-uNBC37eEQst8KakQGw2C7GZd1VGlElrBTDSW0Xtplxz0kFwlsBmjV_wy69Klw6D1v3WB-1-WoUcT6YOH3NsWbbRRTlSbSY4aMjClljPv1Z-kmEczC8pqDyulFV9WiyLt0-xJ0H6MBIOJLnNmue7T_kUU1hv70HZxMH8CjCNZT3zUD43EFZI22tL5WfvLwtDa4U7gUqjq2yw5Oy18MOD0Kz7HFe4jKx9Pk5aeYnJR7v1ciersQ0nysCCj6Vc\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjU2ZTk5ZDM5ODc4YTcxZWVlZmRhZTVkYzBjNmJlMDRiMDdjNmFiNDM5NGFjM2Y1MjMwYWEyZjhlNGZmNDFmZjllMjFlNTU5NTQyZGU4NjMiLCJpYXQiOjE2ODI3NzY5MzguMjI3MjgyLCJuYmYiOjE2ODI3NzY5MzguMjI3Mjg5LCJleHAiOjE2OTg1ODgxMzguMTY3MTIzLCJzdWIiOiI4Iiwic2NvcGVzIjpbIm1hbmFnZS1jYW5kaWRhdGUiLCJyZWFkLW9ubHktY2FuZGlkYXRlIl19.YuY2HhLgjYcrwr3iHh8W8MSHzI9OK6lR2AEP4lGIhDkXw09xMf9eM1anTOZDfVjGTpKcDPFXhSwBpGkc6Xf60un3FBtsgB4Z8TuYEkKlFPioS_oaesL49CAtmMQqd8O4QK_8A8GqWSIu0xlOEAKipEeSBRb9foIHJIt5AmD-hHudQf-myjRdS-QIJZnaj-RExpGR_D4M5c4Tcth10S51XAMsUe9myrPd5ssRpoJqLAUKGeAp4f0T7tmao6KFTCiFHkh4HvhOhrKRo9SSWx6pNL8GtDKJ6ytob5g_Sx8-cr-M6mx9WWx74lAi6CXvJ2h7Pu0Q71__Wcn37P0z0M_crMqR_k72bOto-VYGFIExiGQqGk7uGuter17oKym8OHPXAzdV4MPFfPCBoAebgvCEb7xsuJ-1j0YzgQov9PS7tvscK04ZcJc1hYlOxjgSJZoWcGC_F8upsvq0eGvN60i9thq4jomzx_71T3nJY3UCUHdnSkb1tRTZ3A27hWFsSVriIJpoeF2PfCEoBNxmrYqzgE8TQs2TzY7R4xWJb-bpyBLFEcpooI-3nl8adXtWyiXRNkas5EYY0DfjwQSWFxbTc-4Ocg2TnTqTlRFgylZh8bE1q9T5mkOKCRrsUeja9YURFuBJsaClkd_zhSyMbkB7Cz_bLR-KrGQuiBBsHHaGwPQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local-dev",
+			"value": "http://localhost:8001",
+			"type": "string"
+		}
+	]
+}
