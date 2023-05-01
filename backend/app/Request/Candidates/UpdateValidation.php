@@ -36,6 +36,7 @@ class UpdateValidation extends FormRequest {
 
   public function failedValidation(Validator $validator) {
     throw new HttpResponseException(response()->json([
+        'code'   => 400,
         'errors' => $validator->errors(),
     ], 400));
   }
